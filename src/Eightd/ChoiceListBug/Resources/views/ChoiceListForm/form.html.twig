@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>This is my bug demo.</h1>
+    <div>
+        Current choice:
+        {% if formModel.choice %}
+            {{ formModel.choice }}
+        {% else %}
+            None
+        {% endif %}
+    </div>
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <div>
+        {{ form_row(form.choice, {'expanded':false} ) }}
+    </div>
+
+    {{ form_end(form) }}
+    {% for availableChoice in formModel.availableChoices %}
+        <div>Choice: {{ availableChoice }}</div>
+    {% else %}
+        <div>No available choices</div>
+    {% endfor %}
+{% endblock %}

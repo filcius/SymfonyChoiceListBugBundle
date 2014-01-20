@@ -1,0 +1,3 @@
+eightd_choice_list_bug__form:
+     path:     /
+     defaults: { _controller: EightdChoiceListBugBundle:ChoiceListForm:form }
